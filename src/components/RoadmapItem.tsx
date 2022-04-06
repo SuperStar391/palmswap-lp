@@ -1,5 +1,4 @@
-import * as React from "react";
-import { Typography, useMediaQuery } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import { IRoadmapItem } from "interfaces/IRoadmapItem";
 
