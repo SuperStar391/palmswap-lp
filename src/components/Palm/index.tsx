@@ -2,7 +2,7 @@ import { Typography, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import { tokenFeatures } from "config/tokenFeatures";
 import { ITokenFeature } from "interfaces/ITokenFeature";
-import Card from "./components/Card";
+import Card from "./components/card";
 
 const Palm = function () {
   const theme = useTheme();

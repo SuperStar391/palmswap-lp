@@ -1,6 +1,6 @@
 import { Button, styled, Typography, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
-import Card from "./components/Card";
+import Card from "./components/card";
 
 const StyledButton = styled(Button)`
   border: none;
