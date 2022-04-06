@@ -1,6 +1,6 @@
 import { Button, styled, Typography, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
-import Card from "./components/card";
+import Card from "./components/Card";
 
 const StyledButton = styled(Button)`
   border: none;
@@ -41,10 +41,16 @@ const Blog = function () {
       >
         All About Palmswap Ecosystem & Future
       </Typography>
-      <Box display="flex" flexWrap="wrap" gap="16px" margin="30px 0">
-        <Card />
-        <Card />
-        <Card />
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        gap="16px"
+        margin="30px 0"
+        flexDirection={isSmallScreen ? "column" : "row"}
+      >
+        <Card title="vAMM" subtitle="Dive deep into vAMM" />
+        <Card title="Mainnet" subtitle="Mainnet release" />
+        <Card title="Palm token" subtitle="Palm Tokenomics" />
       </Box>
       <StyledButton variant="contained">Browse Blog</StyledButton>
     </Box>

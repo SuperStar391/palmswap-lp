@@ -38,6 +38,7 @@ const Footer = function () {
   return (
     <>
       <Box
+        flexDirection={isSmallScreen ? "column" : "row"}
         sx={{
           p: isSmallScreen
             ? "40px 25px"
@@ -56,14 +57,16 @@ const Footer = function () {
               lineHeight: "20px",
               fontWeight: "600",
               letterSpacing: "0.05em",
-              mb: "50px",
+              mb: isSmallScreen ? "30px" : "50px",
             }}
           >
             Receive latest news
           </Typography>
           <Box display="flex" gap="8px" marginBottom="30px">
             <TextField type="email" placeholder="Enter your email address" />
-            <StyledButton variant="contained">Get Started</StyledButton>
+            <StyledButton variant="contained" sx={{ whiteSpace: "nowrap" }}>
+              Get Started
+            </StyledButton>
           </Box>
           <Typography
             sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
@@ -152,7 +155,12 @@ const Footer = function () {
             >
               Social Media
             </Typography>
-            <Box display="flex" gap="16px" flex="0 0 30%" flexWrap="wrap">
+            <Box
+              display="flex"
+              gap="16px"
+              flex="0 0 30%"
+              flexWrap={isSmallScreen ? "unset" : "wrap"}
+            >
               <StyledIconButton>
                 <Twitter />
               </StyledIconButton>

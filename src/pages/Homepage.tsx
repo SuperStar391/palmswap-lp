@@ -6,10 +6,8 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import TokenCard from "components/TokenCard";
 import RoadmapCard from "components/RoadmapCard";
-import TokenFeatureCard from "components/TokenFeatureCard";
 
 import { roadmap } from "config/roadmap";
-import { tokenFeatures } from "config/tokenFeatures";
 import { investors } from "config/investors";
 
 import ethLogo from "assets/ethLogo.png";
@@ -18,13 +16,13 @@ import dappImg from "assets/dapp.svg";
 import dappMobileImg from "assets/dapp.png";
 
 import { IRoadmap } from "interfaces/IRoadmap";
-import { ITokenFeature } from "interfaces/ITokenFeature";
 import { IInvestor } from "interfaces/IInvestor";
 
 import V1States from "../components/V1States";
 import Trading from "../components/Trading";
 import Blog from "../components/Blog";
 import RewardsCycle from "../components/RewardsCycle";
+import Palm from "../components/Palm";
 
 const StyledButton = styled(Button)`
   border: none;
@@ -319,54 +317,7 @@ const Homepage = function () {
           ))}
         </Box>
       </Box>
-
-      {/* $PALM */}
-      <Box
-        sx={{
-          py: isSmallScreen ? "30px" : isMediumScreen ? "50px" : "100px",
-          textAlign: "center",
-        }}
-      >
-        <Typography
-          color="textSecondary"
-          sx={{
-            fontSize: "12px",
-            lineHeight: "20px",
-            letterSpacing: "4px",
-            pb: "8px",
-            textTransform: "uppercase",
-          }}
-        >
-          $PALM
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: isSmallScreen ? "24px" : isMediumScreen ? "30px" : "32px",
-            lineHeight: "40px",
-            letterSpacing: "-0.5px",
-            fontWeight: "600",
-            pb: "16px",
-          }}
-        >
-          3 things you need to know about Palm token
-        </Typography>
-        <Box
-          sx={{
-            pt: "50px",
-            display: "flex",
-            gap: isSmallScreen ? "25px" : isMediumScreen ? "20px" : "48px",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignItems: "center",
-            position: "relative",
-            m: isSmallScreen ? "0 -10px 0 -20px" : "0px",
-          }}
-        >
-          {tokenFeatures.map((feature: ITokenFeature, idx: number) => (
-            <TokenFeatureCard key={idx} {...feature} />
-          ))}
-        </Box>
-      </Box>
+      <Palm />
       <RewardsCycle />
       <Blog />
       {/* investors */}

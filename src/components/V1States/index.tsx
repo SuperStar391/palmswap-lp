@@ -63,7 +63,11 @@ const V1States = function () {
         Trusted & built on feedback by thousands of traders
       </Typography>
 
-      <Box display="flex" marginTop="20px">
+      <Box
+        display="flex"
+        marginTop="20px"
+        flexDirection={isSmallScreen ? "column" : "row"}
+      >
         <StyledCard>
           <Typography
             sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}

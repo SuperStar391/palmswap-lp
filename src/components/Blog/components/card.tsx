@@ -1,7 +1,12 @@
 import { Typography, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 
-const Card = function () {
+interface IProp {
+  title: string;
+  subtitle: string;
+}
+
+const Card = function (props: IProp) {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -22,11 +27,12 @@ const Card = function () {
         <Typography
           color="textSecondary"
           sx={{
-            fontSize: "44px",
+            fontSize: "42px",
+            fontWeight: "700",
             color: "#6F57D1",
           }}
         >
-          vAMM
+          {props.title}
         </Typography>
       </Box>
       <Typography
@@ -38,7 +44,7 @@ const Card = function () {
           pb: "8px",
         }}
       >
-        vAMM
+        {props.title}
       </Typography>
       <Typography
         sx={{
@@ -47,7 +53,7 @@ const Card = function () {
           opacity: "0.6",
         }}
       >
-        Dive deep into vAMM
+        {props.subtitle}
       </Typography>
     </Box>
   );

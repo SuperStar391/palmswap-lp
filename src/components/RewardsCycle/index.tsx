@@ -16,7 +16,7 @@ const RewardsCycle = function () {
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box textAlign="center" width="100%">
+    <Box textAlign="center" width="100%" paddingTop="30px">
       <Typography
         color="textSecondary"
         sx={{
@@ -40,7 +40,13 @@ const RewardsCycle = function () {
       >
         Trading Rewards and Tradingcycles
       </Typography>
-      <Box display="flex" gap="32px" width="100%" margin="30px 0 100px">
+      <Box
+        display="flex"
+        gap="32px"
+        width="100%"
+        margin="30px 0 100px"
+        flexDirection={isSmallScreen ? "column" : "row"}
+      >
         <Box
           flex={1}
           sx={{
