@@ -3,7 +3,6 @@ import { Box, useTheme } from "@mui/system";
 import { IRoadmapItem } from "interfaces/IRoadmapItem";
 
 const RoadmapItem = function ({ icon, iconBg, title, desc }: IRoadmapItem) {
-  const theme = useTheme();
   return (
     <Box
       sx={{
