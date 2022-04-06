@@ -1,4 +1,4 @@
-import { Link, styled, Typography, useMediaQuery } from "@mui/material";
+import { styled, Typography, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 
 const StyledCard = styled(Box)`

@@ -7,11 +7,9 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import TokenCard from "components/TokenCard";
 import RoadmapCard from "components/RoadmapCard";
 import TokenFeatureCard from "components/TokenFeatureCard";
-import OnChainStatCard from "components/OnChainStatCard";
 
 import { roadmap } from "config/roadmap";
 import { tokenFeatures } from "config/tokenFeatures";
-import { onChainStats } from "config/onChainStats";
 import { investors } from "config/investors";
 
 import ethLogo from "assets/ethLogo.png";
@@ -21,7 +19,6 @@ import dappMobileImg from "assets/dapp.png";
 
 import { IRoadmap } from "interfaces/IRoadmap";
 import { ITokenFeature } from "interfaces/ITokenFeature";
-import { IOnChainStat } from "interfaces/IOnChainStat";
 import { IInvestor } from "interfaces/IInvestor";
 
 import V1States from "../components/V1States";
