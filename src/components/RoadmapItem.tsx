@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { Box, useTheme } from "@mui/system";
+import { Box } from "@mui/system";
 import { IRoadmapItem } from "interfaces/IRoadmapItem";
 
 const RoadmapItem = function ({ icon, iconBg, title, desc }: IRoadmapItem) {
