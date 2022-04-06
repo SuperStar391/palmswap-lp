@@ -4,7 +4,7 @@ import { Box, useTheme } from "@mui/system";
 interface IProp {
   icon: string;
   title: string;
-  description: string;
+  desc: string;
 }
 
 const StyledCard = styled(Box)`
@@ -55,7 +55,7 @@ const Card = function (props: IProp) {
       <Typography
         sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
       >
-        {props.description}
+        {props.desc}
       </Typography>
     </StyledCard>
   );

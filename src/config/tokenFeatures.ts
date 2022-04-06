@@ -5,7 +5,7 @@ export const tokenFeatures = [
     desc: "We love democracy. That’s why our platform is designed to be governed by you.",
   },
   {
-    icon: "assets/use-case.png",
+    icon: "assets/numerous.png",
     title: "Numerous use cases",
     desc: "The ecosystem is centered around trading rewards, staking, and farms.",
   },

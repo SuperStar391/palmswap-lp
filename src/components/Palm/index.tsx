@@ -1,11 +1,7 @@
-import { styled, Typography, useMediaQuery } from "@mui/material";
+import { Typography, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
-import TokenFeatureCard from "components/TokenFeatureCard";
 import { tokenFeatures } from "config/tokenFeatures";
 import { ITokenFeature } from "interfaces/ITokenFeature";
-import governance from "assets/governance.png";
-import numerous from "assets/numerous.png";
-import deflation from "assets/deflation.png";
 import Card from "./components/Card";
 
 const Palm = function () {
@@ -55,24 +51,9 @@ const Palm = function () {
           m: isSmallScreen ? "0 -10px 0 -20px" : "0px",
         }}
       >
-        <Card
-          icon={governance}
-          title="Governance"
-          description="We love democracy. That’s why our platform is designed to be governed by you."
-        />
-        <Card
-          icon={numerous}
-          title="Numerous use cases"
-          description="The ecosystem is centered around trading rewards, staking, and farms."
-        />
-        <Card
-          icon={deflation}
-          title="Deflation"
-          description="The ecosystem is centered around trading rewards, staking, and farms."
-        />
-        {/* {tokenFeatures.map((feature: ITokenFeature, idx: number) => (
-          <TokenFeatureCard key={idx} {...feature} />
-        ))} */}
+        {tokenFeatures.map((feature: ITokenFeature, idx: number) => (
+          <Card key={idx} {...feature} />
+        ))}
       </Box>
     </Box>
   );
