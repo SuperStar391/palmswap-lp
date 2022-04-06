@@ -10,8 +10,10 @@ import RoadmapCard from "components/RoadmapCard";
 import { roadmap } from "config/roadmap";
 import { investors } from "config/investors";
 
-import ethLogo from "assets/ethLogo.png";
-import btcLogo from "assets/btcLogo.png";
+import ethLogo from "assets/eth.png";
+import btcLogo from "assets/btc.png";
+import bnbLogo from "assets/bnb.png";
+import usdLogo from "assets/tether.png";
 import dappImg from "assets/dapp.svg";
 import dappMobileImg from "assets/dapp.png";
 
@@ -38,6 +40,7 @@ const Homepage = function () {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const [imgSize, setImgSize] = useState(0);
   const [cryptoPrices, setCryptoPrices] = useState({
     BTC: { USD: 38538.72 },
     ETH: { USD: 2562.33 },
@@ -52,6 +55,14 @@ const Homepage = function () {
         setCryptoPrices(json);
       });
   }, []);
+
+  useEffect(() => {
+    if (isSmallScreen) {
+      setImgSize(40);
+    } else {
+      setImgSize(50);
+    }
+  }, [isSmallScreen, isMediumScreen]);
 
   return (
     <Box
@@ -132,16 +143,56 @@ const Homepage = function () {
       </Box>
 
       {/* dapp image */}
-      <Box
-        sx={{
-          maxWidth: isMediumScreen ? "100%" : "900px",
-          mt: isSmallScreen ? "53px" : "80px",
-          display: "flex",
-          alignItems: "center",
-        }}
-        component="img"
-        src={isSmallScreen ? dappMobileImg : dappImg}
-      />
+      <Box sx={{ mt: isSmallScreen ? "53px" : "80px", position: "relative" }}>
+        <Box
+          sx={{ maxWidth: isMediumScreen ? "100%" : "900px" }}
+          component="img"
+          src={isSmallScreen ? dappMobileImg : dappImg}
+        />
+        <Box
+          display="flex"
+          gap="16px"
+          flexDirection={isSmallScreen ? "row" : "column"}
+          sx={
+            isSmallScreen
+              ? { marginTop: "-30px", justifyContent: "center" }
+              : {
+                  position: "absolute",
+                  bottom: "30px",
+                  right: `${-imgSize / 2}px`,
+                }
+          }
+        >
+          <Box
+            component="img"
+            src={ethLogo}
+            width={imgSize}
+            height={imgSize}
+            alt="eth"
+          />
+          <Box
+            component="img"
+            src={bnbLogo}
+            width={imgSize}
+            height={imgSize}
+            alt="bnb"
+          />
+          <Box
+            component="img"
+            src={btcLogo}
+            width={imgSize}
+            height={imgSize}
+            alt="btc"
+          />
+          <Box
+            component="img"
+            src={usdLogo}
+            width={imgSize}
+            height={imgSize}
+            alt="usd"
+          />
+        </Box>
+      </Box>
       <V1States />
       <Box
         sx={{
