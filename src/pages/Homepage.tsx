@@ -104,6 +104,7 @@ const Homepage = function () {
             right: 0,
             top: 0,
             height: "1000px",
+            overflow: "hidden",
           }}
         >
           <Box

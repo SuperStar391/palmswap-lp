@@ -20,7 +20,7 @@ const Trading = function () {
     <Box
       textAlign="center"
       sx={{
-        width: "100%",
+        width: "calc(100vw - 17px)",
         padding: isSmallScreen ? "20px" : isMediumScreen ? "30px" : "50px",
         background: "linear-gradient(90deg,#9D7BE9 0%,#6F57D1 100%)",
       }}
