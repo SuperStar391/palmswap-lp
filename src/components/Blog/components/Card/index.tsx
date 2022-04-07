@@ -52,7 +52,7 @@ const Card = function (props: IProp) {
       </Typography>
       <Typography
         sx={{
-          fontSize: isSmallScreen ? "10px" : "16px",
+          fontSize: isSmallScreen ? "13px" : "16px",
           lineHeight: "24px",
           opacity: "0.6",
         }}
