@@ -3,11 +3,7 @@ import { Button, Link, styled, Typography } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import { useMediaQuery } from "@mui/material";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-
 import TokenCard from "components/TokenCard";
-import RoadmapCard from "components/RoadmapCard";
-
-import { roadmap } from "config/roadmap";
 import { investors } from "config/investors";
 
 import ethLogo from "assets/eth.png";
@@ -20,7 +16,6 @@ import background1 from "assets/background1.png";
 import background2 from "assets/background2.png";
 import bgMobile from "assets/bgMobile.png";
 
-import { IRoadmap } from "interfaces/IRoadmap";
 import { IInvestor } from "interfaces/IInvestor";
 
 import V1States from "../components/V1States";
@@ -28,6 +23,7 @@ import Trading from "../components/Trading";
 import Blog from "../components/Blog";
 import RewardsCycle from "../components/RewardsCycle";
 import Palm from "../components/Palm";
+import Roadmap from "../components/Roadmap";
 
 const StyledButton = styled(Button)`
   border: none;
@@ -348,56 +344,7 @@ const Homepage = function () {
           </Box>
         </Box>
       </Box>
-
-      <Box py={isSmallScreen ? "20px" : isMediumScreen ? "40px" : "70px"}>
-        {/* why palmswap */}
-        <Box
-          sx={{
-            textAlign: "center",
-            // maxWidth: isSmallScreen ? "306px" : "inherit",
-          }}
-        >
-          <GradientText sx={{ pb: "8px" }}>ADVANTAGES</GradientText>
-          <Typography
-            sx={{
-              fontSize: isSmallScreen
-                ? "24px"
-                : isMediumScreen
-                ? "30px"
-                : "32px",
-              lineHeight: "40px",
-              letterSpacing: "-0.5px",
-              fontWeight: "600",
-              pb: "16px",
-            }}
-          >
-            Why Palmswap Protocol?
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: isSmallScreen ? "13px" : "16px",
-              lineHeight: "22px",
-              opacity: "0.6",
-              pb: "20px",
-            }}
-          >
-            In order to meet the needs of all traders we rely on Multi-protocol.
-          </Typography>
-        </Box>
-
-        {/* Roadmap */}
-        <Box
-          sx={{
-            display: "flex",
-            gap: "8px",
-            flexWrap: "wrap",
-          }}
-        >
-          {roadmap.map((r: IRoadmap, idx: number) => (
-            <RoadmapCard key={idx} {...r} />
-          ))}
-        </Box>
-      </Box>
+      <Roadmap />
       <Palm />
       <RewardsCycle />
       <Blog />
