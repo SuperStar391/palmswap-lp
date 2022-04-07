@@ -16,6 +16,9 @@ import bnbLogo from "assets/bnb.png";
 import usdLogo from "assets/tether.png";
 import dappImg from "assets/dapp.svg";
 import dappMobileImg from "assets/dapp.png";
+import background1 from "assets/background1.png";
+import background2 from "assets/background2.png";
+import bgMobile from "assets/bgMobile.png";
 
 import { IRoadmap } from "interfaces/IRoadmap";
 import { IInvestor } from "interfaces/IInvestor";
@@ -34,6 +37,18 @@ const StyledButton = styled(Button)`
   line-height: 24px;
   color: #ffffff;
   border-radius: 24px;
+`;
+
+const GradientText = styled(Typography)`
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  background: linear-gradient(to right, #9d7be9 0%, #6f57d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
 `;
 
 const Homepage = function () {
@@ -74,7 +89,43 @@ const Homepage = function () {
         alignItems: "center",
       }}
     >
-      {/*  */}
+      {isSmallScreen ? (
+        <Box
+          component="img"
+          src={bgMobile}
+          sx={{
+            position: "absolute",
+            top: 0,
+            width: "100vw",
+            zIndex: -1,
+          }}
+        />
+      ) : (
+        <Box>
+          <Box
+            component="img"
+            src={background1}
+            sx={{
+              position: "absolute",
+              top: "-35%",
+              left: "-12%",
+              width: "57vw",
+              zIndex: -1,
+            }}
+          />
+          <Box
+            component="img"
+            src={background2}
+            sx={{
+              position: "absolute",
+              top: "-25%",
+              right: "-15%",
+              width: "57vw",
+              zIndex: -1,
+            }}
+          />
+        </Box>
+      )}
       <Box
         sx={{
           maxWidth: isSmallScreen
@@ -85,17 +136,7 @@ const Homepage = function () {
           textAlign: "center",
         }}
       >
-        <Typography
-          color="textSecondary"
-          sx={{
-            fontSize: "14px",
-            lineHeight: "24px",
-            letterSpacing: "4px",
-            pb: "8px",
-          }}
-        >
-          TESTNET NOW LIVE
-        </Typography>
+        <GradientText sx={{ pb: "8px" }}>TESTNET NOW LIVE</GradientText>
         <Typography
           sx={{
             fontSize: isSmallScreen ? "40px" : isMediumScreen ? "72px" : "52px",
@@ -109,37 +150,40 @@ const Homepage = function () {
         </Typography>
         <Typography
           sx={{
-            fontSize: isSmallScreen ? "14px" : "18px",
+            fontSize: isSmallScreen ? "13px" : "16px",
             lineHeight: "24px",
             opacity: "0.6",
-            pb: "20px",
+            pb: "30px",
+            width: isSmallScreen ? "100%" : "50%",
+            margin: "0 auto",
           }}
         >
-          Trade perpetuals decentralized with up to 10x leverage and earn tokens
-          while trading trough Tradingcycles.
+          Trade perpetuals decentralized with up to <b>10x leverage</b> and earn
+          tokens while trading trough Tradingcycles.
         </Typography>
         <StyledButton
           href="https://testnet.palmswap.org"
           variant="contained"
-          sx={{ marginBottom: "20px" }}
+          sx={{ marginBottom: "20px", padding: "14px 36px" }}
         >
           Visit Testnet
         </StyledButton>
-        <Link
-          href="https://docs.palmswap.org"
-          target="_blank"
-          underline="none"
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "text.secondary",
-            fontSize: isSmallScreen ? "14px" : "16px",
-          }}
-        >
-          Documentation
-          <OpenInNewIcon fontSize="medium" sx={{ pl: "8px" }} />
-        </Link>
+        <Box>
+          <Link
+            href="https://docs.palmswap.org"
+            target="_blank"
+            underline="none"
+            sx={{
+              display: "inline-flex",
+              alignItems: "center",
+              color: "text.secondary",
+              fontSize: isSmallScreen ? "14px" : "16px",
+            }}
+          >
+            Documentation
+            <OpenInNewIcon fontSize="medium" sx={{ pl: "8px" }} />
+          </Link>
+        </Box>
       </Box>
 
       {/* dapp image */}
@@ -201,18 +245,7 @@ const Homepage = function () {
       >
         {/* Market part */}
         <Box sx={{ textAlign: "center" }}>
-          <Typography
-            color="textSecondary"
-            sx={{
-              fontSize: "12px",
-              lineHeight: "20px",
-              letterSpacing: "4px",
-              pb: "8px",
-              textTransform: "uppercase",
-            }}
-          >
-            MARKETS
-          </Typography>
+          <GradientText sx={{ pb: "8px" }}>MARKETS</GradientText>
           <Typography
             sx={{
               fontSize: isSmallScreen
@@ -230,7 +263,7 @@ const Homepage = function () {
           </Typography>
           <Typography
             sx={{
-              fontSize: isSmallScreen ? "14px" : "17px",
+              fontSize: isSmallScreen ? "13px" : "16px",
               lineHeight: "22px",
               opacity: "0.6",
               pb: "20px",
@@ -316,18 +349,7 @@ const Homepage = function () {
             // maxWidth: isSmallScreen ? "306px" : "inherit",
           }}
         >
-          <Typography
-            color="textSecondary"
-            sx={{
-              fontSize: "12px",
-              lineHeight: "20px",
-              letterSpacing: "4px",
-              pb: "8px",
-              textTransform: "uppercase",
-            }}
-          >
-            ADVANTAGES
-          </Typography>
+          <GradientText sx={{ pb: "8px" }}>ADVANTAGES</GradientText>
           <Typography
             sx={{
               fontSize: isSmallScreen
@@ -345,7 +367,7 @@ const Homepage = function () {
           </Typography>
           <Typography
             sx={{
-              fontSize: isSmallScreen ? "14px" : "17px",
+              fontSize: isSmallScreen ? "13px" : "16px",
               lineHeight: "22px",
               opacity: "0.6",
               pb: "20px",
@@ -379,18 +401,7 @@ const Homepage = function () {
           width: "100%",
         }}
       >
-        <Typography
-          color="textSecondary"
-          sx={{
-            fontSize: "12px",
-            lineHeight: "20px",
-            letterSpacing: "4px",
-            pb: "8px",
-            textTransform: "uppercase",
-          }}
-        >
-          backed by
-        </Typography>
+        <GradientText sx={{ pb: "8px" }}>backed by</GradientText>
         <Typography
           sx={{
             fontSize: isSmallScreen ? "24px" : isMediumScreen ? "30px" : "32px",

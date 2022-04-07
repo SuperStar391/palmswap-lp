@@ -27,7 +27,7 @@ const MenuItemWrapper = styled.div`
 
 const TradeBtn = styled(Button)`
   border: none;
-  padding: 8px 24px;
+  padding: 12px 24px;
   font-size: 16px;
   line-height: 24px;
   border-radius: 24px;

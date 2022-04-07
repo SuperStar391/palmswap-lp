@@ -16,6 +16,18 @@ const StyledCard = styled(Box)`
   }
 `;
 
+const GradientText = styled(Typography)`
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  background: linear-gradient(to right, #9d7be9 0%, #6f57d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+`;
+
 const V1States = function () {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -29,18 +41,7 @@ const V1States = function () {
         marginTop: isSmallScreen ? "30px" : isMediumScreen ? "50px" : "100px",
       }}
     >
-      <Typography
-        color="textSecondary"
-        sx={{
-          fontSize: "12px",
-          lineHeight: "20px",
-          letterSpacing: "4px",
-          pb: "8px",
-          textTransform: "uppercase",
-        }}
-      >
-        V1 States
-      </Typography>
+      <GradientText sx={{ pb: "8px" }}>V1 States</GradientText>
       <Typography
         sx={{
           fontSize: isSmallScreen ? "24px" : isMediumScreen ? "30px" : "32px",
@@ -54,7 +55,7 @@ const V1States = function () {
       </Typography>
       <Typography
         sx={{
-          fontSize: isSmallScreen ? "14px" : "17px",
+          fontSize: isSmallScreen ? "13px" : "16px",
           lineHeight: "22px",
           opacity: "0.6",
           pb: "20px",
@@ -70,7 +71,7 @@ const V1States = function () {
       >
         <StyledCard>
           <Typography
-            sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
+            sx={{ fontSize: isSmallScreen ? "13px" : "16px", opacity: "0.6" }}
           >
             Trading Volume
           </Typography>
@@ -80,14 +81,14 @@ const V1States = function () {
             $4,036.92
           </Typography>
           <Typography
-            sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
+            sx={{ fontSize: isSmallScreen ? "13px" : "16px", opacity: "0.6" }}
           >
             All Time
           </Typography>
         </StyledCard>
         <StyledCard>
           <Typography
-            sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
+            sx={{ fontSize: isSmallScreen ? "13px" : "16px", opacity: "0.6" }}
           >
             Trading Volume
           </Typography>
@@ -97,14 +98,14 @@ const V1States = function () {
             $4,036.92
           </Typography>
           <Typography
-            sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
+            sx={{ fontSize: isSmallScreen ? "13px" : "16px", opacity: "0.6" }}
           >
             Today
           </Typography>
         </StyledCard>
         <StyledCard>
           <Typography
-            sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
+            sx={{ fontSize: isSmallScreen ? "13px" : "16px", opacity: "0.6" }}
           >
             Cycle
           </Typography>
@@ -114,7 +115,7 @@ const V1States = function () {
             1
           </Typography>
           <Typography
-            sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
+            sx={{ fontSize: isSmallScreen ? "13px" : "16px", opacity: "0.6" }}
           >
             Soon
           </Typography>

@@ -10,6 +10,18 @@ const StyledButton = styled(Button)`
   border-radius: 24px;
 `;
 
+const GradientText = styled(Typography)`
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  background: linear-gradient(to right, #9d7be9 0%, #6f57d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+`;
+
 const RewardsCycle = function () {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -17,18 +29,7 @@ const RewardsCycle = function () {
 
   return (
     <Box textAlign="center" width="100%" paddingTop="30px">
-      <Typography
-        color="textSecondary"
-        sx={{
-          fontSize: "12px",
-          lineHeight: "20px",
-          letterSpacing: "4px",
-          pb: "8px",
-          textTransform: "uppercase",
-        }}
-      >
-        Trading
-      </Typography>
+      <GradientText sx={{ pb: "8px" }}>Trading</GradientText>
       <Typography
         sx={{
           fontSize: isSmallScreen ? "24px" : isMediumScreen ? "30px" : "32px",

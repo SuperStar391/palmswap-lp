@@ -17,9 +17,9 @@ import { Facebook, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 
 const StyledButton = styled(Button)`
   border: none;
-  padding: 8px 24px;
+  padding: 8px 36px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   border-radius: 12px;
 `;
@@ -28,6 +28,12 @@ const StyledIconButton = styled(IconButton)`
   background: #0d0717;
   color: #ffffff;
   opacity: 0.8;
+`;
+
+const StyledTextField = styled(TextField)`
+  border: 1px solid #111015;
+  background: linear-gradient(30deg, #111015, #0d0617);
+  border-radius: 16px;
 `;
 
 const Footer = function () {
@@ -50,10 +56,10 @@ const Footer = function () {
           gap: isSmallScreen ? "30px" : "unset",
         }}
       >
-        <Box flex={1}>
+        <Box flex={4} sx={{ pr: isSmallScreen ? "0" : "100px" }}>
           <Typography
             sx={{
-              fontSize: "14px",
+              fontSize: "16px",
               lineHeight: "20px",
               fontWeight: "600",
               letterSpacing: "0.05em",
@@ -63,20 +69,24 @@ const Footer = function () {
             Receive latest news
           </Typography>
           <Box display="flex" gap="8px" marginBottom="30px">
-            <TextField type="email" placeholder="Enter your email address" />
+            <StyledTextField
+              type="email"
+              placeholder="Enter your email address"
+              sx={{ flex: 1 }}
+            />
             <StyledButton variant="contained" sx={{ whiteSpace: "nowrap" }}>
               Get Started
             </StyledButton>
           </Box>
           <Typography
-            sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
+            sx={{ fontSize: isSmallScreen ? "13px" : "16px", opacity: "0.6" }}
           >
             *by entering your email address you confirming that you're agree to
             subscribe to our newsletter.
           </Typography>
         </Box>
         <Box
-          flex={1}
+          flex={5}
           sx={{
             display: "flex",
             flexWrap: "wrap",
@@ -99,7 +109,7 @@ const Footer = function () {
             >
               <Typography
                 sx={{
-                  fontSize: "14px",
+                  fontSize: "16px",
                   lineHeight: "20px",
                   fontWeight: "600",
                   letterSpacing: "0.05em",
@@ -146,7 +156,7 @@ const Footer = function () {
           >
             <Typography
               sx={{
-                fontSize: "14px",
+                fontSize: "16px",
                 lineHeight: "20px",
                 fontWeight: "600",
                 letterSpacing: "0.05em",

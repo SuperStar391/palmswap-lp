@@ -42,6 +42,7 @@ const theme = createTheme({
         },
         containedSecondary: {
           backgroundColor: "#ffffff",
+          boxShadow: "none",
           color: "#000000",
           ":hover": {
             background: "#ffffff80",

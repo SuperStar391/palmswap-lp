@@ -1,8 +1,20 @@
-import { Typography, useMediaQuery } from "@mui/material";
+import { Typography, useMediaQuery, styled } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import { tokenFeatures } from "config/tokenFeatures";
 import { ITokenFeature } from "interfaces/ITokenFeature";
 import Card from "./components/Card";
+
+const GradientText = styled(Typography)`
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  background: linear-gradient(to right, #9d7be9 0%, #6f57d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  display: inline-block;
+`;
 
 const Palm = function () {
   const theme = useTheme();
@@ -17,18 +29,7 @@ const Palm = function () {
         textAlign: "center",
       }}
     >
-      <Typography
-        color="textSecondary"
-        sx={{
-          fontSize: "12px",
-          lineHeight: "20px",
-          letterSpacing: "4px",
-          pb: "8px",
-          textTransform: "uppercase",
-        }}
-      >
-        $PALM
-      </Typography>
+      <GradientText sx={{ pb: "8px" }}>$PALM</GradientText>
       <Typography
         sx={{
           fontSize: isSmallScreen ? "24px" : isMediumScreen ? "30px" : "32px",

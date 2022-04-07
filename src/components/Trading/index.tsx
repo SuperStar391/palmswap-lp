@@ -4,7 +4,7 @@ import logo from "assets/logoWithoutText.svg";
 
 const StyledButton = styled(Button)`
   border: none;
-  padding: 8px 24px;
+  padding: 12px 36px;
   cursor: pointer;
   font-size: 16px;
   line-height: 24px;
@@ -38,7 +38,7 @@ const Trading = function () {
           lineHeight: "40px",
           letterSpacing: "-0.5px",
           fontWeight: "600",
-          pb: "16px",
+          pb: "32px",
         }}
       >
         Start trading perpetuals on Palmswap today.

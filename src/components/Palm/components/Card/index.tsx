@@ -5,6 +5,7 @@ interface IProp {
   icon: string;
   title: string;
   desc: string;
+  color: string;
 }
 
 const StyledCard = styled(Box)`
@@ -35,12 +36,47 @@ const Card = function (props: IProp) {
   return (
     <StyledCard>
       <Box
-        component="img"
-        src={props.icon}
-        alt="governance"
-        width={100}
-        margin="-70px 0 20px"
-      />
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          padding: "40px",
+          overflow: "hidden",
+        }}
+      >
+        <Box
+          sx={{
+            margin: "-70px auto 0",
+            padding: "30px",
+            width: "40px",
+            background: props.color,
+            filter: "blur(40px)",
+          }}
+        ></Box>
+      </Box>
+      <Box
+        sx={{
+          width: "80px",
+          height: "80px",
+          padding: "15px",
+          border: `1px solid ${props.color}`,
+          borderRadius: "20px",
+          background: `${props.color}36`,
+          margin: "-60px auto 20px",
+        }}
+      >
+        <Box
+          component="img"
+          src={props.icon}
+          alt="governance"
+          sx={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+          }}
+        />
+      </Box>
       <Typography
         sx={{
           fontSize: isSmallScreen ? "16px" : isMediumScreen ? "18px" : "20px",
@@ -53,7 +89,7 @@ const Card = function (props: IProp) {
         {props.title}
       </Typography>
       <Typography
-        sx={{ fontSize: isSmallScreen ? "14px" : "17px", opacity: "0.6" }}
+        sx={{ fontSize: isSmallScreen ? "13px" : "16px", opacity: "0.6" }}
       >
         {props.desc}
       </Typography>
