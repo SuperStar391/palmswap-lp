@@ -12,7 +12,7 @@ const StyledCard = styled(Box)`
   flex: 1;
   text-align: center;
   background: #0b0612;
-  padding: 20px;
+  padding: 70px 70px 40px;
   border-radius: 16px;
   position: relative;
   ::before {
@@ -57,13 +57,13 @@ const Card = function (props: IProp) {
       </Box>
       <Box
         sx={{
-          width: "80px",
-          height: "80px",
+          width: "100px",
+          height: "100px",
           padding: "15px",
           border: `1px solid ${props.color}`,
           borderRadius: "20px",
           background: `${props.color}36`,
-          margin: "-60px auto 20px",
+          margin: "-120px auto 20px",
         }}
       >
         <Box

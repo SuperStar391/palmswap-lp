@@ -1,10 +1,21 @@
-import { Typography, useMediaQuery } from "@mui/material";
+import { Typography, useMediaQuery, styled } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
+import blogBackground from "assets/blogBackground.png";
 
 interface IProp {
   title: string;
   subtitle: string;
 }
+
+const GradientText = styled(Typography)`
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-weight: 600;
+  background: linear-gradient(to right, #9d7be9 0%, #6f57d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+`;
 
 const Card = function (props: IProp) {
   const theme = useTheme();
@@ -18,22 +29,15 @@ const Card = function (props: IProp) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#040507",
+          background: "url('assets/blogBackground.png')",
           height: "250px",
           borderRadius: "8px",
           marginBottom: "16px",
         }}
       >
-        <Typography
-          color="textSecondary"
-          sx={{
-            fontSize: "42px",
-            fontWeight: "700",
-            color: "#6F57D1",
-          }}
-        >
+        <GradientText sx={{ fontSize: "42px", fontWeight: "700" }}>
           {props.title}
-        </Typography>
+        </GradientText>
       </Box>
       <Typography
         sx={{

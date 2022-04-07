@@ -20,7 +20,7 @@ const GradientText = styled(Typography)`
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 4px;
-  font-weight: 500;
+  font-weight: 600;
   background: linear-gradient(to right, #9d7be9 0%, #6f57d1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
