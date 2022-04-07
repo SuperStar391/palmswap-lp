@@ -205,11 +205,11 @@ const Roadmap = function () {
                       marginBottom: "8px",
                     }}
                   >
-                    Fully on-chain
+                    Use different Order Types
                   </Typography>
                   <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
-                    Trade long and short with up to 10x leverage, no sign-up, no
-                    middleman, no waiting.
+                    Needed order types as limit orders, take profit and stop
+                    loss on-chain available now.
                   </Typography>
                 </Box>
               </Box>
@@ -236,11 +236,11 @@ const Roadmap = function () {
                       marginBottom: "8px",
                     }}
                   >
-                    Fully on-chain
+                    Guaranteed liquidity
                   </Typography>
                   <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
-                    Trade long and short with up to 10x leverage, no sign-up, no
-                    middleman, no waiting.
+                    Trade instantly with guaranteed liquidity using vAMM
+                    technology at any time.
                   </Typography>
                 </Box>
               </Box>
@@ -271,11 +271,11 @@ const Roadmap = function () {
                       marginBottom: "8px",
                     }}
                   >
-                    Fully on-chain
+                    Dynamic vAMM
                   </Typography>
                   <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
-                    Trade long and short with up to 10x leverage, no sign-up, no
-                    middleman, no waiting.
+                    The upgrade to Dynamic vAMM is being implemented to ensure
+                    optimal slippage and liquidity for traders.
                   </Typography>
                 </Box>
               </Box>
@@ -302,11 +302,11 @@ const Roadmap = function () {
                       marginBottom: "8px",
                     }}
                   >
-                    Fully on-chain
+                    Deep Liquidity
                   </Typography>
                   <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
-                    Trade long and short with up to 10x leverage, no sign-up, no
-                    middleman, no waiting.
+                    Dynamic K allows us to ensure that prices are always traded
+                    in the part of the curve with the highest liquidity.
                   </Typography>
                 </Box>
               </Box>
@@ -333,11 +333,11 @@ const Roadmap = function () {
                       marginBottom: "8px",
                     }}
                   >
-                    Fully on-chain
+                    High Leverage
                   </Typography>
                   <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
-                    Trade long and short with up to 10x leverage, no sign-up, no
-                    middleman, no waiting.
+                    Users can trade perpetuals with up 50x leverage and profit
+                    of our low fee policy.
                   </Typography>
                 </Box>
               </Box>
