@@ -101,13 +101,21 @@ const Homepage = function () {
           }}
         />
       ) : (
-        <Box>
+        <Box
+          sx={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            top: 0,
+            height: "1000px",
+          }}
+        >
           <Box
             component="img"
             src={background1}
             sx={{
               position: "absolute",
-              top: "-35%",
+              top: "-30%",
               left: "-12%",
               width: "57vw",
               zIndex: -1,
@@ -118,7 +126,7 @@ const Homepage = function () {
             src={background2}
             sx={{
               position: "absolute",
-              top: "-25%",
+              top: "-17%",
               right: "-15%",
               width: "57vw",
               zIndex: -1,
