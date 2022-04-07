@@ -1,6 +1,7 @@
 import { Grid, styled, Typography, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import globalIcon from "assets/global.svg";
+import blacklogo from "assets/blacklogo.svg";
 
 const GradientText = styled(Typography)`
   font-size: 14px;
@@ -54,6 +55,7 @@ const Roadmap = function () {
       sx={{
         width: "100%",
         marginTop: isSmallScreen ? "30px" : isMediumScreen ? "50px" : "100px",
+        position: "relative",
       }}
     >
       <GradientText sx={{ pb: "8px" }}>Advantages</GradientText>
@@ -78,7 +80,19 @@ const Roadmap = function () {
       >
         In order to meet the needs of all traders we rely on Multi-protocol.
       </Typography>
-
+      {!isSmallScreen && (
+        <Box
+          component="img"
+          src={blacklogo}
+          sx={{
+            position: "absolute",
+            opacity: 0.2,
+            top: "200px",
+            left: 0,
+            width: "400px",
+          }}
+        />
+      )}
       <Grid container sx={{ marginTop: "30px" }}>
         <StyledContainer
           container
@@ -147,6 +161,7 @@ const Roadmap = function () {
             textAlign: "left",
             paddingLeft: "20px",
             paddingBottom: "70px",
+            flexWrap: "nowrap",
           }}
         >
           <Grid item xs={6}>
