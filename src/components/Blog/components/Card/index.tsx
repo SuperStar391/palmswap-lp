@@ -1,6 +1,5 @@
 import { Typography, useMediaQuery, styled } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
-import blogBackground from "assets/blogBackground.png";
 
 interface IProp {
   title: string;
