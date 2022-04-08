@@ -8,10 +8,7 @@ import { investors } from "config/investors";
 
 import ethLogo from "assets/eth.png";
 import btcLogo from "assets/btc.png";
-import bnbLogo from "assets/bnb.png";
-import usdLogo from "assets/tether.png";
-import dappImg from "assets/dapp.svg";
-import dappMobileImg from "assets/dapp.png";
+
 import background1 from "assets/background1.png";
 import background2 from "assets/background2.png";
 import bgMobile from "assets/bgMobile.png";
