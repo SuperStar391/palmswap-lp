@@ -32,6 +32,7 @@ const Card = function (props: IProp) {
           height: "250px",
           borderRadius: "8px",
           marginBottom: "16px",
+          border: "1px solid #9D7BE9",
         }}
       >
         <GradientText sx={{ fontSize: "42px", fontWeight: "700" }}>
