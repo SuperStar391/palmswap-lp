@@ -18,7 +18,7 @@ const StyledCard = styled(Box)`
   ::before {
     content: "";
     position: absolute;
-    bottom: -10px;
+    bottom: -7px;
     left: 30px;
     right: 30px;
     padding: 10px;
@@ -26,6 +26,12 @@ const StyledCard = styled(Box)`
     border-radius: 10px;
     z-index: -1;
   }
+  :hover {
+    .card-image {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  },
 `;
 
 const Card = function (props: IProp) {
@@ -34,7 +40,15 @@ const Card = function (props: IProp) {
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <StyledCard>
+    <StyledCard
+      sx={{
+        "&:hover": {
+          "& .card-image": {
+            boxShadow: `0px 0px 20px 0px ${props.color}7f`,
+          },
+        },
+      }}
+    >
       <Box
         sx={{
           position: "absolute",
@@ -56,6 +70,7 @@ const Card = function (props: IProp) {
         ></Box>
       </Box>
       <Box
+        className="card-image"
         sx={{
           width: "100px",
           height: "100px",

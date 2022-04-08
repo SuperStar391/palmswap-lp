@@ -28,11 +28,14 @@ const Card = function (props: IProp) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "url('assets/blogBackground.png')",
+          background: "linear-gradient(to right, #0B0D15 0%, #0F0618 100%)",
           height: "250px",
           borderRadius: "8px",
           marginBottom: "16px",
-          border: "1px solid #9D7BE9",
+          border: "1px solid #111111",
+          "&:hover": {
+            backgroundPosition: "100px",
+          },
         }}
       >
         <GradientText sx={{ fontSize: "42px", fontWeight: "700" }}>

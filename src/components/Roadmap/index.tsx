@@ -182,7 +182,7 @@ const Roadmap = function () {
                     margin="10px"
                   />
                 </Box>
-                <Box maxWidth="300px">
+                <Box maxWidth="400px">
                   <Typography
                     sx={{
                       fontSize: isMediumScreen ? "14px" : "16px",
@@ -191,7 +191,7 @@ const Roadmap = function () {
                   >
                     Fully on-chain
                   </Typography>
-                  <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
+                  <Typography sx={{ fontSize: "13px", opacity: 0.6 }}>
                     Trade long and short with up to 10x leverage, no sign-up, no
                     middleman, no waiting.
                   </Typography>
@@ -213,7 +213,7 @@ const Roadmap = function () {
                     margin="10px"
                   />
                 </Box>
-                <Box maxWidth="300px">
+                <Box maxWidth="400px">
                   <Typography
                     sx={{
                       fontSize: isMediumScreen ? "14px" : "16px",
@@ -222,7 +222,7 @@ const Roadmap = function () {
                   >
                     Use different Order Types
                   </Typography>
-                  <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
+                  <Typography sx={{ fontSize: "13px", opacity: 0.6 }}>
                     Needed order types as limit orders, take profit and stop
                     loss on-chain available now.
                   </Typography>
@@ -244,7 +244,7 @@ const Roadmap = function () {
                     margin="10px"
                   />
                 </Box>
-                <Box maxWidth="300px">
+                <Box maxWidth="400px">
                   <Typography
                     sx={{
                       fontSize: isMediumScreen ? "14px" : "16px",
@@ -253,7 +253,7 @@ const Roadmap = function () {
                   >
                     Guaranteed liquidity
                   </Typography>
-                  <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
+                  <Typography sx={{ fontSize: "13px", opacity: 0.6 }}>
                     Trade instantly with guaranteed liquidity using vAMM
                     technology at any time.
                   </Typography>
@@ -279,7 +279,7 @@ const Roadmap = function () {
                     margin="10px"
                   />
                 </Box>
-                <Box maxWidth="300px">
+                <Box maxWidth="400px">
                   <Typography
                     sx={{
                       fontSize: isMediumScreen ? "14px" : "16px",
@@ -288,7 +288,7 @@ const Roadmap = function () {
                   >
                     Dynamic vAMM
                   </Typography>
-                  <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
+                  <Typography sx={{ fontSize: "13px", opacity: 0.6 }}>
                     The upgrade to Dynamic vAMM is being implemented to ensure
                     optimal slippage and liquidity for traders.
                   </Typography>
@@ -310,7 +310,7 @@ const Roadmap = function () {
                     margin="10px"
                   />
                 </Box>
-                <Box maxWidth="300px">
+                <Box maxWidth="400px">
                   <Typography
                     sx={{
                       fontSize: isMediumScreen ? "14px" : "16px",
@@ -319,7 +319,7 @@ const Roadmap = function () {
                   >
                     Deep Liquidity
                   </Typography>
-                  <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
+                  <Typography sx={{ fontSize: "13px", opacity: 0.6 }}>
                     Dynamic K allows us to ensure that prices are always traded
                     in the part of the curve with the highest liquidity.
                   </Typography>
@@ -341,7 +341,7 @@ const Roadmap = function () {
                     margin="10px"
                   />
                 </Box>
-                <Box maxWidth="300px">
+                <Box maxWidth="400px">
                   <Typography
                     sx={{
                       fontSize: isMediumScreen ? "14px" : "16px",
@@ -350,7 +350,7 @@ const Roadmap = function () {
                   >
                     High Leverage
                   </Typography>
-                  <Typography sx={{ fontSize: "11px", opacity: 0.6 }}>
+                  <Typography sx={{ fontSize: "13px", opacity: 0.6 }}>
                     Users can trade perpetuals with up 50x leverage and profit
                     of our low fee policy.
                   </Typography>
