@@ -48,7 +48,7 @@ const Homepage = function () {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
-  const [imgSize, setImgSize] = useState(0);
+  // const [imgSize, setImgSize] = useState(0);
   const [cryptoPrices, setCryptoPrices] = useState({
     BTC: { USD: 38538.72 },
     ETH: { USD: 2562.33 },
@@ -64,13 +64,13 @@ const Homepage = function () {
       });
   }, []);
 
-  useEffect(() => {
-    if (isSmallScreen) {
-      setImgSize(40);
-    } else {
-      setImgSize(50);
-    }
-  }, [isSmallScreen, isMediumScreen]);
+  // useEffect(() => {
+  //   if (isSmallScreen) {
+  //     setImgSize(40);
+  //   } else {
+  //     setImgSize(50);
+  //   }
+  // }, [isSmallScreen, isMediumScreen]);
 
   return (
     <Box
