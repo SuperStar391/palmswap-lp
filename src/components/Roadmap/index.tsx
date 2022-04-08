@@ -4,6 +4,8 @@ import globalIcon from "assets/global.svg";
 import tunderIcon from "assets/tunder.svg";
 import messageIcon from "assets/message.png";
 import weightIcon from "assets/weight.png";
+import leverageIcon from "assets/leverage.svg";
+import liquidityIcon from "assets/liquidity.svg";
 import blacklogo from "assets/blacklogo.svg";
 
 const GradientText = styled(Typography)`
@@ -241,7 +243,7 @@ const Roadmap = function () {
                 >
                   <Box
                     component="img"
-                    src={tunderIcon}
+                    src={liquidityIcon}
                     width={15}
                     height={15}
                     margin="10px"
@@ -341,7 +343,7 @@ const Roadmap = function () {
                 >
                   <Box
                     component="img"
-                    src={messageIcon}
+                    src={leverageIcon}
                     width={15}
                     height={15}
                     margin="10px"

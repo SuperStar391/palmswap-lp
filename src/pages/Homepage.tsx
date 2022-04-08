@@ -9,8 +9,7 @@ import { investors } from "config/investors";
 import ethLogo from "assets/eth.png";
 import btcLogo from "assets/btc.png";
 
-import background1 from "assets/background1.png";
-import background2 from "assets/background2.png";
+import background3 from "assets/background3.png";
 import bgMobile from "assets/bgMobile.png";
 
 import { IInvestor } from "interfaces/IInvestor";
@@ -95,39 +94,18 @@ const Homepage = function () {
         />
       ) : (
         <Box
+          component="img"
+          src={background3}
           sx={{
+            margin: "30px, 0",
             position: "absolute",
-            left: 0,
-            right: 0,
-            top: 0,
-            height: "1000px",
-            overflow: "hidden",
+            width: "850px",
+            left: "50%",
+            top: "95px",
+            transform: "translateX(-50%)",
             zIndex: -1,
           }}
-        >
-          <Box
-            component="img"
-            src={background1}
-            sx={{
-              position: "absolute",
-              top: "-30%",
-              left: "-12%",
-              width: "57vw",
-              zIndex: -1,
-            }}
-          />
-          <Box
-            component="img"
-            src={background2}
-            sx={{
-              position: "absolute",
-              top: "-17%",
-              right: "-15%",
-              width: "57vw",
-              zIndex: -1,
-            }}
-          />
-        </Box>
+        />
       )}
 
       <Box
@@ -138,6 +116,7 @@ const Homepage = function () {
             ? "525px"
             : "623px",
           textAlign: "center",
+          margin: "60px 0",
         }}
       >
         <GradientText sx={{ pb: "8px" }}>TESTNET NOW LIVE</GradientText>

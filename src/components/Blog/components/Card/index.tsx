@@ -28,21 +28,39 @@ const Card = function (props: IProp) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(to right, #0B0D15 0%, #0F0618 100%)",
+          position: "relative",
           height: "250px",
           borderRadius: "8px",
           marginBottom: "16px",
           border: "1px solid #111111",
+          background: "linear-gradient(to right, #0B0D15 0%, #0F0618 100%)",
           "&:hover": {
-            background: "linear-gradient(to right, #9d7be9 0%, #6f57d1 100%)",
             "& p": {
               background: "none",
               "-webkit-background-clip": "border-box",
               "-webkit-text-fill-color": "white",
+              zIndex: 1,
+            },
+            "&>div": {
+              opacity: 1,
             },
           },
         }}
       >
+        <Box
+          sx={{
+            position: "absolute",
+            border: "1px solid #111111",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: "-1px",
+            borderRadius: "6px",
+            background: "linear-gradient(to right, #9d7be9 0%, #6f57d1 100%)",
+            opacity: 0,
+            transition: "0.3s",
+          }}
+        ></Box>
         <GradientText sx={{ fontSize: "42px", fontWeight: "700" }}>
           {props.title}
         </GradientText>
