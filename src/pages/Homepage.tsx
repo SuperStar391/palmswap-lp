@@ -132,6 +132,7 @@ const Homepage = function () {
           />
         </Box>
       )}
+
       <Box
         sx={{
           maxWidth: isSmallScreen
@@ -243,9 +244,12 @@ const Homepage = function () {
           />
         </Box>
       </Box>
+
       <V1States />
+
       <Box
         sx={{
+          width: "100%",
           pt: isSmallScreen ? "30px" : isMediumScreen ? "50px" : "100px",
         }}
       >
@@ -280,76 +284,64 @@ const Homepage = function () {
         </Box>
 
         {/* ETH/BTC data */}
-        <Box display="flex" gap="24px" flexDirection="column">
+        <Box display="flex" gap="30px" flexWrap="wrap" justifyContent="center">
+          <TokenCard
+            name="Ethereum"
+            symbol="ETH"
+            logo={ethLogo}
+            price={cryptoPrices.ETH.USD}
+            graph="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1027.svg"
+          />
+          <TokenCard
+            name="Bitcoin"
+            symbol="BSC"
+            logo={btcLogo}
+            price={cryptoPrices.BTC.USD}
+            graph="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1.svg"
+          />
           <Box
-            display="flex"
-            gap="24px"
-            flexWrap="wrap"
-            justifyContent="center"
+            sx={{
+              p: "20px 30px",
+              background: "#0D0617",
+              border: "1px solid #111015",
+              borderRadius: "8px",
+              textAlign: "center",
+              flex: 1,
+            }}
           >
-            <TokenCard
-              name="Ethereum"
-              symbol="ETH"
-              logo={ethLogo}
-              price={cryptoPrices.ETH.USD}
-              graph="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1027.svg"
-            />
-            <TokenCard
-              name="Bitcoin"
-              symbol="BSC"
-              logo={btcLogo}
-              price={cryptoPrices.BTC.USD}
-              graph="https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/1.svg"
-            />
-          </Box>
-          <Box
-            display="flex"
-            gap="24px"
-            flexWrap="wrap"
-            justifyContent="center"
-          >
-            <Box
+            <StyledButton
+              variant="contained"
               sx={{
-                p: "20px",
-                background: "#0D0617",
-                border: "1px solid #111015",
-                borderRadius: "8px",
-                width: isSmallScreen ? "100%" : "50%",
-                textAlign: "center",
+                width: "40px",
+                padding: "8px",
+                minWidth: "auto",
+                marginBottom: "10px",
               }}
             >
-              <StyledButton
-                variant="contained"
-                sx={{
-                  width: "40px",
-                  padding: "8px",
-                  minWidth: "auto",
-                  marginBottom: "10px",
-                }}
-              >
-                +
-              </StyledButton>
-              <Typography sx={{ fontSize: isMediumScreen ? "14px" : "16px" }}>
-                Stay Tuned
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: isSmallScreen ? "10px" : "12px",
-                  lineHeight: "16px",
-                  fontWeight: "400",
-                  opacity: 0.6,
-                }}
-              >
-                More Coming Soon!
-              </Typography>
-            </Box>
+              +
+            </StyledButton>
+            <Typography sx={{ fontSize: isMediumScreen ? "14px" : "16px" }}>
+              Stay Tuned
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: isSmallScreen ? "10px" : "12px",
+                lineHeight: "16px",
+                fontWeight: "400",
+                opacity: 0.6,
+              }}
+            >
+              More Coming Soon!
+            </Typography>
           </Box>
         </Box>
       </Box>
+
       <Roadmap />
       <Palm />
       <RewardsCycle />
       <Blog />
+
       {/* investors */}
       <Box
         sx={{
@@ -385,6 +377,7 @@ const Homepage = function () {
           ))}
         </Box>
       </Box>
+
       <Trading />
     </Box>
   );

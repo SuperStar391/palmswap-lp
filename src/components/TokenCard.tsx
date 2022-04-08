@@ -17,6 +17,7 @@ const TokenCard = function ({ name, symbol, logo, price, graph }: Props) {
   const [isHover, setIsHover] = useState(false);
   return (
     <Box
+      flex={1}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
@@ -141,11 +142,10 @@ const TokenCard = function ({ name, symbol, logo, price, graph }: Props) {
       ) : (
         <Box
           sx={{
-            p: "20px",
+            p: "20px 30px",
             background: "#0D0617",
             border: "1px solid #111015",
             borderRadius: "8px",
-            minWidth: "350px",
             display: "flex",
             flexDirection: "row",
           }}
