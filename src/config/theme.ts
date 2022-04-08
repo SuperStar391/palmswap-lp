@@ -35,9 +35,12 @@ const theme = createTheme({
           textTransform: "none",
         },
         containedPrimary: {
-          background: "linear-gradient(90deg,#9D7BE9 0%,#6F57D1 100%)",
+          transition: "0.5s",
+          backgroundSize: "200% auto",
+          backgroundImage:
+            "linear-gradient(90deg,#9D7BE9 0%,#6F57D1 51%, #9D7BE9 100%)",
           ":hover": {
-            opacity: 0.8,
+            backgroundPosition: "right center",
           },
         },
         containedSecondary: {
