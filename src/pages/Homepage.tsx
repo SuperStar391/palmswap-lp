@@ -192,7 +192,7 @@ const Homepage = function () {
           </Link>
         </Box>
       </Box>
-
+{/* 
       {/* dapp image */}
       <Box sx={{ mt: isSmallScreen ? "53px" : "80px", position: "relative" }}>
         <Box
@@ -243,7 +243,7 @@ const Homepage = function () {
             alt="usd"
           />
         </Box>
-      </Box>
+      </Box> */}
 
       <V1States />
 
