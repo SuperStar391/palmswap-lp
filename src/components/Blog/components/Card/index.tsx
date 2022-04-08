@@ -34,7 +34,12 @@ const Card = function (props: IProp) {
           marginBottom: "16px",
           border: "1px solid #111111",
           "&:hover": {
-            backgroundPosition: "100px",
+            background: "linear-gradient(to right, #9d7be9 0%, #6f57d1 100%)",
+            "& p": {
+              background: "none",
+              "-webkit-background-clip": "border-box",
+              "-webkit-text-fill-color": "white",
+            },
           },
         }}
       >
