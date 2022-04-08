@@ -1,6 +1,9 @@
 import { Grid, styled, Typography, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import globalIcon from "assets/global.svg";
+import tunderIcon from "assets/tunder.svg";
+import messageIcon from "assets/message.png";
+import weightIcon from "assets/weight.png";
 import blacklogo from "assets/blacklogo.svg";
 
 const GradientText = styled(Typography)`
@@ -207,7 +210,7 @@ const Roadmap = function () {
                 >
                   <Box
                     component="img"
-                    src={globalIcon}
+                    src={tunderIcon}
                     width={15}
                     height={15}
                     margin="10px"
@@ -238,7 +241,7 @@ const Roadmap = function () {
                 >
                   <Box
                     component="img"
-                    src={globalIcon}
+                    src={tunderIcon}
                     width={15}
                     height={15}
                     margin="10px"
@@ -267,13 +270,14 @@ const Roadmap = function () {
                 <Box
                   sx={{
                     height: "35px",
-                    background: "#1E2130",
+                    background:
+                      "linear-gradient(to right, #9d7be9 0%, #6f57d1 100%)",
                     borderRadius: "4px",
                   }}
                 >
                   <Box
                     component="img"
-                    src={globalIcon}
+                    src={weightIcon}
                     width={15}
                     height={15}
                     margin="10px"
@@ -298,13 +302,14 @@ const Roadmap = function () {
                 <Box
                   sx={{
                     height: "35px",
-                    background: "#1E2130",
+                    background:
+                      "linear-gradient(to right, #9d7be9 0%, #6f57d1 100%)",
                     borderRadius: "4px",
                   }}
                 >
                   <Box
                     component="img"
-                    src={globalIcon}
+                    src={messageIcon}
                     width={15}
                     height={15}
                     margin="10px"
@@ -329,13 +334,14 @@ const Roadmap = function () {
                 <Box
                   sx={{
                     height: "35px",
-                    background: "#1E2130",
+                    background:
+                      "linear-gradient(to right, #9d7be9 0%, #6f57d1 100%)",
                     borderRadius: "4px",
                   }}
                 >
                   <Box
                     component="img"
-                    src={globalIcon}
+                    src={messageIcon}
                     width={15}
                     height={15}
                     margin="10px"

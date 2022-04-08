@@ -28,12 +28,27 @@ const StyledIconButton = styled(IconButton)`
   background: #0d0717;
   color: #ffffff;
   opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+    background: #6f57d1;
+  }
 `;
 
 const StyledTextField = styled(TextField)`
   border: 1px solid #111015;
   background: linear-gradient(30deg, #111015, #0d0617);
   border-radius: 16px;
+  &.Mui-focused {
+    .MuiOutlinedInput-notchedOutline {
+      border: 0;
+    }
+  }
+  &:hover {
+    .MuiOutlinedInput-notchedOutline {
+      border: 0;
+    }
+  }
 `;
 
 const Footer = function () {
@@ -136,6 +151,10 @@ const Footer = function () {
                         fontWeight: "400",
                         opacity: "0.6",
                         color: "white",
+                        ":hover": {
+                          opacity: 1,
+                          color: "#6f57d1",
+                        },
                       }}
                     >
                       {Object.keys(item)[0]}

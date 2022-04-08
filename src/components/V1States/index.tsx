@@ -6,14 +6,6 @@ const StyledCard = styled(Box)`
   padding: 16px;
   border: 1px solid #1b171f;
   background: #0a0911;
-  &:first-child {
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-  }
-  &:last-child {
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-  }
 `;
 
 const GradientText = styled(Typography)`
@@ -68,6 +60,29 @@ const V1States = function () {
         display="flex"
         marginTop="20px"
         flexDirection={isSmallScreen ? "column" : "row"}
+        sx={
+          isSmallScreen
+            ? {
+                "&>div:first-child": {
+                  borderTopLeftRadius: "8px",
+                  borderTopRightRadius: "8px",
+                },
+                "&>div:last-child": {
+                  borderBottomLeftRadius: "8px",
+                  borderBottomRightRadius: "8px",
+                },
+              }
+            : {
+                "&>div:first-child": {
+                  borderTopLeftRadius: "8px",
+                  borderBottomLeftRadius: "8px",
+                },
+                "&>div:last-child": {
+                  borderTopRightRadius: "8px",
+                  borderBottomRightRadius: "8px",
+                },
+              }
+        }
       >
         <StyledCard>
           <Typography
