@@ -192,58 +192,6 @@ const Homepage = function () {
           </Link>
         </Box>
       </Box>
-{/* 
-      {/* dapp image */}
-      <Box sx={{ mt: isSmallScreen ? "53px" : "80px", position: "relative" }}>
-        <Box
-          sx={{ maxWidth: isMediumScreen ? "100%" : "900px" }}
-          component="img"
-          src={isSmallScreen ? dappMobileImg : dappImg}
-        />
-        <Box
-          display="flex"
-          gap="16px"
-          flexDirection={isSmallScreen ? "row" : "column"}
-          sx={
-            isSmallScreen
-              ? { marginTop: "-30px", justifyContent: "center" }
-              : {
-                  position: "absolute",
-                  bottom: "30px",
-                  right: `${-imgSize / 2}px`,
-                }
-          }
-        >
-          <Box
-            component="img"
-            src={ethLogo}
-            width={imgSize}
-            height={imgSize}
-            alt="eth"
-          />
-          <Box
-            component="img"
-            src={bnbLogo}
-            width={imgSize}
-            height={imgSize}
-            alt="bnb"
-          />
-          <Box
-            component="img"
-            src={btcLogo}
-            width={imgSize}
-            height={imgSize}
-            alt="btc"
-          />
-          <Box
-            component="img"
-            src={usdLogo}
-            width={imgSize}
-            height={imgSize}
-            alt="usd"
-          />
-        </Box>
-      </Box> */}
 
       <V1States />
 
