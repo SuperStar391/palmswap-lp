@@ -8,18 +8,6 @@ const StyledCard = styled(Box)`
   background: #0a0911;
 `;
 
-const GradientText = styled(Typography)`
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 4px;
-  font-weight: 600;
-  background: linear-gradient(to right, #9d7be9 0%, #6f57d1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  display: inline-block;
-`;
-
 const V1States = function () {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -33,7 +21,7 @@ const V1States = function () {
         marginTop: isSmallScreen ? "30px" : isMediumScreen ? "50px" : "100px",
       }}
     >
-      <GradientText sx={{ pb: "8px" }}>V1 States</GradientText>
+      {/* <GradientText sx={{ pb: "8px" }}>V1 States</GradientText>
       <Typography
         sx={{
           fontSize: isSmallScreen ? "24px" : isMediumScreen ? "30px" : "32px",
@@ -54,7 +42,7 @@ const V1States = function () {
         }}
       >
         Trusted & built on feedback by thousands of traders
-      </Typography>
+      </Typography> */}
 
       <Box
         display="flex"

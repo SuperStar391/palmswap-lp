@@ -116,7 +116,7 @@ const Homepage = function () {
             ? "525px"
             : "623px",
           textAlign: "center",
-          margin: "60px 0",
+          margin: "80px 0",
         }}
       >
         <GradientText sx={{ pb: "8px" }}>TESTNET NOW LIVE</GradientText>
