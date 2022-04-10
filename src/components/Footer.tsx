@@ -7,6 +7,7 @@ import {
   Button,
   IconButton,
   Box,
+  Tooltip,
 } from "@mui/material";
 import { useTheme } from "@mui/system";
 import logo from "assets/logo.svg";
@@ -133,8 +134,37 @@ const Footer = function () {
               >
                 {submenu}
               </Typography>
-              {footerMenu[submenu as keyof typeof footerMenu].map(
-                (item, idx) => (
+              {footerMenu[submenu as keyof typeof footerMenu].map((item, idx) =>
+                item[Object.keys(item)[0] as keyof typeof item] === "#" ? (
+                  <Link
+                    key={idx}
+                    href={item[Object.keys(item)[0] as keyof typeof item]}
+                    underline="none"
+                  >
+                    <Tooltip title="Coming soon" arrow>
+                      <Typography
+                        key={idx}
+                        component="span"
+                        sx={{
+                          fontSize: isSmallScreen
+                            ? "16px"
+                            : isMediumScreen
+                            ? "14px"
+                            : "16px",
+                          fontWeight: "400",
+                          opacity: "0.6",
+                          color: "white",
+                          ":hover": {
+                            opacity: 1,
+                            color: "#6f57d1",
+                          },
+                        }}
+                      >
+                        {Object.keys(item)[0]}
+                      </Typography>
+                    </Tooltip>
+                  </Link>
+                ) : (
                   <Link
                     key={idx}
                     href={item[Object.keys(item)[0] as keyof typeof item]}
@@ -190,16 +220,29 @@ const Footer = function () {
               flex="0 0 30%"
               flexWrap={isSmallScreen ? "unset" : "wrap"}
             >
-              <StyledIconButton>
+              <StyledIconButton
+                onClick={() =>
+                  (window.location.href = "https://twitter.com/Palmswaporg")
+                }
+              >
                 <Twitter />
               </StyledIconButton>
               <StyledIconButton>
                 <Facebook />
               </StyledIconButton>
-              <StyledIconButton>
+              <StyledIconButton
+                onClick={() =>
+                  (window.location.href = "https://medium.com/@Palmswap")
+                }
+              >
                 <Box component="img" src={medium} alt="medium" />
               </StyledIconButton>
-              <StyledIconButton>
+              <StyledIconButton
+                onClick={() =>
+                  (window.location.href =
+                    "https://discord.com/invite/B2EyhkQSZR")
+                }
+              >
                 <Box component="img" src={discord} alt="discord" />
               </StyledIconButton>
               <StyledIconButton>

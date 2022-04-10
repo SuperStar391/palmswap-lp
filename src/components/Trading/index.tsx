@@ -43,7 +43,11 @@ const Trading = function () {
       >
         Start trading perpetuals on Palmswap today.
       </Typography>
-      <StyledButton variant="contained" color="secondary">
+      <StyledButton
+        variant="contained"
+        color="secondary"
+        href="https://testnet.palmswap.org"
+      >
         Trade Now
       </StyledButton>
     </Box>

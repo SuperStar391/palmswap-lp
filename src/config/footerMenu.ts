@@ -2,10 +2,10 @@ export const footerMenu = {
   Community: [
     { About: "#" },
     { Developers: "#" },
-    { Blog: "#" },
-    { Careers: "#" },
+    { Blog: "https://medium.com/@Palmswap" },
+    { Careers: "https://web3.career/web3-companies/palmswap" },
     { FAQ: "#" },
-    { Documentation: "#" },
+    { Documentation: "https://docs.palmswap.org/" },
   ],
   Developer: [
     { Github: "#" },

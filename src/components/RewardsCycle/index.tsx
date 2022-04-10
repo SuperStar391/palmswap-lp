@@ -1,4 +1,10 @@
-import { Button, styled, Typography, useMediaQuery } from "@mui/material";
+import {
+  Button,
+  styled,
+  Tooltip,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 
 const StyledButton = styled(Button)`
@@ -75,9 +81,11 @@ const RewardsCycle = function () {
             Secure tokens before TGE through Retroactive Trading Rewards within
             the first 30 days after launch.
           </Typography>
-          <StyledButton variant="contained" color="secondary">
-            Learn How
-          </StyledButton>
+          <Tooltip title="Coming soon" arrow>
+            <StyledButton variant="contained" color="secondary">
+              Learn How
+            </StyledButton>
+          </Tooltip>
         </Box>
         <Box
           flex={1}
@@ -107,7 +115,11 @@ const RewardsCycle = function () {
             Every week a new Tradingcycle starts that rewards traders on the DEX
             with PALM tokens.
           </Typography>
-          <StyledButton variant="contained" color="secondary">
+          <StyledButton
+            variant="contained"
+            color="secondary"
+            href="https://docs.palmswap.org/protocol/trading-cycle"
+          >
             Learn More
           </StyledButton>
         </Box>

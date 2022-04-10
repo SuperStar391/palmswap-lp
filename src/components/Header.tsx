@@ -4,7 +4,7 @@ import { Menu as MenuIcon, Close } from "@mui/icons-material";
 import Menu, { MenuProps } from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import styled from "@emotion/styled";
-import { useMediaQuery } from "@mui/material";
+import { Tooltip, useMediaQuery } from "@mui/material";
 import { Box, useTheme } from "@mui/system";
 import Button from "@mui/material/Button";
 
@@ -133,21 +133,41 @@ const Header = function () {
             <MenuItemWrapper onClick={() => navigate("/about")}>
               About
             </MenuItemWrapper>
-            <MenuItemWrapper onClick={() => navigate("/developers")}>
-              Developers
-            </MenuItemWrapper>
-            <MenuItemWrapper onClick={() => navigate("/token")}>
+
+            <Tooltip title="Coming soon" arrow>
+              <MenuItemWrapper onClick={() => navigate("/")}>
+                Developers
+              </MenuItemWrapper>
+            </Tooltip>
+
+            <MenuItemWrapper
+              onClick={() =>
+                (window.location.href =
+                  "https://docs.palmswap.org/expected-tokenomics/palm")
+              }
+            >
               Token
             </MenuItemWrapper>
-            <MenuItemWrapper onClick={() => navigate("/community")}>
+            <MenuItemWrapper
+              onClick={() =>
+                (window.location.href = "https://linktr.ee/palmswap")
+              }
+            >
               Community
             </MenuItemWrapper>
-            <MenuItemWrapper onClick={() => navigate("/careers")}>
+            <MenuItemWrapper
+              onClick={() =>
+                (window.location.href =
+                  "https://web3.career/web3-companies/palmswap")
+              }
+            >
               Careers
             </MenuItemWrapper>
           </Box>
         </Box>
-        <TradeBtn variant="contained">Trade</TradeBtn>
+        <TradeBtn variant="contained" href="https://testnet.palmswap.org">
+          Trade
+        </TradeBtn>
 
         {isSmallScreen && (
           <Button

@@ -53,7 +53,9 @@ const Blog = function () {
         <Card title="Mainnet" subtitle="Mainnet release" />
         <Card title="Palm token" subtitle="Palm Tokenomics" />
       </Box>
-      <StyledButton variant="contained">Browse Blog</StyledButton>
+      <StyledButton variant="contained" href="https://medium.com/@Palmswap">
+        Browse Blog
+      </StyledButton>
     </Box>
   );
 };
