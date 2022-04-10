@@ -45,6 +45,7 @@ const Header = function () {
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [menuOpen, setMenuOpen] = React.useState(null);
   const open = Boolean(anchorEl);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -52,6 +53,13 @@ const Header = function () {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleMenuOpen = (e: any) => {
+    setMenuOpen(e.currentTarget);
+  };
+  const handleMenuClose = (e: any) => {
+    setMenuOpen(null);
   };
 
   const CustomMenu = mStyled((props: MenuProps) => (
@@ -130,9 +138,43 @@ const Header = function () {
               gap: "24px",
             }}
           >
-            <MenuItemWrapper onClick={() => navigate("/about")}>
+            <MenuItemWrapper onClick={(e) => handleMenuOpen(e)}>
               About
             </MenuItemWrapper>
+            <CustomMenu
+              elevation={0}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "center",
+              }}
+              keepMounted
+              anchorEl={menuOpen}
+              open={Boolean(menuOpen)}
+              onClose={handleMenuClose}
+            >
+              <MenuItem
+                style={{ minWidth: 166 }}
+                onClick={(e) => {
+                  handleMenuClose(e);
+                  window.location.href = "https://docs.palmswap.org/";
+                }}
+              >
+                Documentation
+              </MenuItem>
+              <MenuItem
+                style={{ minWidth: 166 }}
+                onClick={(e) => {
+                  handleMenuClose(e);
+                  window.location.href = "https://medium.com/@Palmswap";
+                }}
+              >
+                Blog
+              </MenuItem>
+            </CustomMenu>
 
             <Tooltip title="Coming soon" arrow>
               <MenuItemWrapper onClick={() => navigate("/")}>
