@@ -34,7 +34,11 @@ const RewardsCycle = function () {
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box textAlign="center" width="100%" paddingTop="30px">
+    <Box
+      textAlign="center"
+      width="100%"
+      paddingBottom={isSmallScreen ? "50px" : isMediumScreen ? "80px" : "150px"}
+    >
       <GradientText sx={{ pb: "8px" }}>Trading</GradientText>
       <Typography
         sx={{
@@ -51,7 +55,7 @@ const RewardsCycle = function () {
         display="flex"
         gap="32px"
         width="100%"
-        margin="30px 0 100px"
+        margin="30px 0 0"
         flexDirection={isSmallScreen ? "column" : "row"}
       >
         <Box

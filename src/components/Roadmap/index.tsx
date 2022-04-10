@@ -59,7 +59,7 @@ const Roadmap = function () {
       textAlign="center"
       sx={{
         width: "100%",
-        marginTop: isSmallScreen ? "30px" : isMediumScreen ? "50px" : "100px",
+        marginTop: isSmallScreen ? "50px" : isMediumScreen ? "80px" : "150px",
         position: "relative",
       }}
     >

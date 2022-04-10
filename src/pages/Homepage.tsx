@@ -174,7 +174,7 @@ const Homepage = function () {
       <Box
         sx={{
           width: "100%",
-          pt: isSmallScreen ? "30px" : isMediumScreen ? "50px" : "100px",
+          pt: isSmallScreen ? "50px" : isMediumScreen ? "80px" : "150px",
         }}
       >
         {/* Market part */}
@@ -269,7 +269,7 @@ const Homepage = function () {
       {/* investors */}
       <Box
         sx={{
-          py: isSmallScreen ? "30px" : isMediumScreen ? "50px" : "100px",
+          py: isSmallScreen ? "50px" : isMediumScreen ? "80px" : "150px",
           textAlign: "center",
           width: "100%",
         }}

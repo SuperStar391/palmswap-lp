@@ -25,7 +25,7 @@ const Palm = function () {
     <Box
       width="100%"
       sx={{
-        py: "70px",
+        py: isSmallScreen ? "50px" : isMediumScreen ? "80px" : "150px",
         textAlign: "center",
       }}
     >
